@@ -1013,9 +1013,16 @@ QA risks:
   /* ── RESPONSIVE ── */
   @media (max-width: 1024px) {
     .hero { grid-template-columns: 1fr; }
-    .hero-content { padding: 80px 40px; max-width: 640px; }
-    .hero-image { display: none; }
+    .hero-content { padding: 80px 40px 0; max-width: 640px; }
     .hero { min-height: auto; padding-bottom: 80px; }
+    .hero-image {
+      height: auto;
+      aspect-ratio: 4/3;
+      margin: 40px 40px 0;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-image::after { display: none; }
     .what-inner,
     .vibe-inner,
     .products-inner { grid-template-columns: 1fr; gap: 40px; }
