@@ -800,6 +800,38 @@ QA risks:
     margin: 8px 0;
   }
 
+  .session-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 48px 0 8px;
+  }
+
+  .session-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: var(--radius);
+    padding: 24px 26px;
+  }
+
+  .session-card-city {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--fg-light);
+    margin-bottom: 10px;
+  }
+
+  .session-card-row {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.8;
+  }
+
+  .session-card-row .early-bird {
+    color: var(--warm);
+    font-weight: 700;
+  }
+
   .bank-note {
     margin-top: 18px;
     background: rgba(201,123,74,0.2);
@@ -942,6 +974,7 @@ QA risks:
     .who-grid { grid-template-columns: 1fr; }
     .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
     .reg-inner { grid-template-columns: 1fr; }
+    .session-cards { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 768px) {
@@ -1162,13 +1195,13 @@ QA risks:
       <div class="price-card fade-in" data-lvt-eid="a53702a116">
         <div class="price-card-icon" data-lvt-eid="30a40d44d3">👯</div>
         <div class="price-tag" data-lvt-eid="dae98a821d">揪團最超值</div>
-        <div class="price-card-name" data-lvt-eid="142edd3647">三人同行</div>
-        <div class="price-amount" style="font-size:1.5rem; margin-bottom:8px;" data-lvt-eid="2d03f6a128">每人再贈</div>
-        <div class="price-unit" style="margin-bottom:12px;" data-lvt-eid="f6e69c8b0d">一條作者親編限量結繩飾品</div>
+        <div class="price-card-name" data-lvt-eid="142edd3647">3人同行</div>
+        <div class="price-amount" data-lvt-eid="f3328b0beb">NT$600</div>
+        <div class="price-unit" data-lvt-eid="99940027ec">/ 人（享早鳥價）</div>
         <ul class="price-includes" data-lvt-eid="6b85cf90a4">
-          <li data-lvt-eid="8976ba2a72">三人同行即享贈品</li>
-          <li data-lvt-eid="8ce24be5bd">作者親手編製，限量</li>
-          <li data-lvt-eid="b4ca5e8ae3">獨一無二，無法購買</li>
+          <li data-lvt-eid="8976ba2a72">3 人一起報名</li>
+          <li data-lvt-eid="e006957ab4">每人享早鳥價 NT$600</li>
+          <li data-lvt-eid="8ce24be5bd">加碼再贈限量結繩飾品</li>
         </ul>
       </div>
     </div>
@@ -1182,20 +1215,33 @@ QA risks:
       <div class="section-label" data-lvt-eid="95bef6765e">報名方式</div>
       <h2 class="section-title" data-lvt-eid="e04c87abe3">報名與匯款資訊</h2>
     </div>
+    <div class="session-cards fade-in">
+      <div class="session-card">
+        <div class="session-card-city">台南場（暫定）</div>
+        <div class="session-card-row">10 月 21 日（三）14:00–17:00</div>
+        <div class="session-card-row">名額 30 位</div>
+        <div class="session-card-row early-bird">早鳥截止：10 月 14 日（三）</div>
+      </div>
+      <div class="session-card">
+        <div class="session-card-city">台北場（暫定）</div>
+        <div class="session-card-row">10 月 24 日（六）14:00–17:00</div>
+        <div class="session-card-row early-bird">早鳥截止：10 月 17 日（六）</div>
+      </div>
+    </div>
     <div class="reg-inner" data-lvt-eid="2cfe2c593a">
       <div class="reg-steps fade-in" data-lvt-eid="eb521ceed6">
         <div class="reg-step" data-lvt-eid="3ef8dd5ceb">
           <div class="reg-step-num" data-lvt-eid="904f040f79">1</div>
           <div class="reg-step-text" data-lvt-eid="44d00ede69">
             <strong data-lvt-eid="77f8c95ed4">填寫報名資料</strong>
-            <span data-lvt-eid="0c6fc19b3b">請於粉專私訊或來訊留下您的姓名、報名人數與場次，我們會盡快回覆確認。</span>
+            <span data-lvt-eid="0c6fc19b3b">請於粉專私訊或來訊留下您的姓名、報名人數與欲參加場次（台南 10/21 或台北 10/24），我們會盡快回覆確認。</span>
           </div>
         </div>
         <div class="reg-step" data-lvt-eid="e50dab9f6a">
           <div class="reg-step-num" data-lvt-eid="7a10be8793">2</div>
           <div class="reg-step-text" data-lvt-eid="76be5bffaa">
             <strong data-lvt-eid="e3e9625342">匯款至指定帳號</strong>
-            <span data-lvt-eid="6ee47ad168">依右側匯款資訊完成匯款，金額依選擇方案（早鳥 NT$600 / 一般 NT$800）。</span>
+            <span data-lvt-eid="6ee47ad168">依右側匯款資訊完成匯款，金額依選擇方案（早鳥 NT$600 / 一般 NT$800），早鳥截止日請見上方場次資訊。</span>
           </div>
         </div>
         <div class="reg-step" data-lvt-eid="c56abb308e">
@@ -1207,7 +1253,7 @@ QA risks:
         </div>
         <div style="margin-top: 12px; padding: 16px 20px; background: rgba(255,255,255,0.06); border-radius: 10px; border: 1px solid rgba(255,255,255,0.12);" data-lvt-eid="b3d15181cb">
           <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.7;" data-lvt-eid="7d4c157da8">
-            📅 場次資訊請洽官方粉專公告，名額有限，建議提早確認場次後再匯款。
+            📅 名額有限，建議提早確認場次後再匯款；場次如有異動以官方粉專公告為準。
           </p>
         </div>
       </div>
